@@ -1,3 +1,16 @@
 body {
-  font-family: helvetica;
+  font-family: Optima, sans-serif;
+}
+
+div {
+    height: 200px;
+    width: 500px;
+    background: white;
+
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    margin-top: 10px;
+    margin-left: -200px;
+    text-align: center;
 }
