@@ -9,6 +9,6 @@ div {
 
 @media screen and (min-width: 600px) {
   div {
-    font-size: 32px;
+    font-size: 32px; 
   }
 }
