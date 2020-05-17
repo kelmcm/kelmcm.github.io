@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Exercise Timer</title>
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/kelmcm/kelmcm.github.io/master/sun.png">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <p>(WIP) Exercise Timer</p>
+  <form
+    id = "app"
+  >
+
+    <label for="excercise_time">Exercise time:</label>
+    <input
+      type="number"
+      id="excercise_time"
+      name="excercise_time"
+      style="width: 40px"
+      placeholder=0> seconds, repeated
+
+    <input
+      type="number"
+      id="repititions"
+      name="repititions"
+      style="width: 40px"
+      placeholder=0> time(s)
+    <br><br>
+
+    <label for="rest_time">Rest time:</label>
+    <input
+      type="number"
+      id="rest_time"
+      name="rest_time"
+      style="width: 40px"
+      placeholder=0
+    > seconds<br><br>
+
+    <label for="sets">Sets:</label>
+    <input
+      type="number"
+      id="sets"
+      name="sets"
+      style="width: 40px"
+      placeholder=0
+    ><br><br>
+
+    <input
+      type="reset"
+      value="Clear"
+    >
+
+    <input
+      type="submit"
+      value="Create timer"
+    >
+  </form>
+
+  <br></br>
+  <hr class="solid">
+
+  <script src="/timer/timer.js"></script>
+
+</body>
+
+</html>
