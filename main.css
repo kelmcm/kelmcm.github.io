@@ -1,5 +1,5 @@
 body {
-  font-family: "Avenir Next", Optima, sans-serif;
+  font-family: 'Lora', "Avenir Next", Optima, sans-serif;
 }
 
 div {
@@ -9,7 +9,7 @@ div {
 
 @media screen and (min-width: 1000px) {
   div {
-    font-size: 16px;
+    font-size: 14px;
     width: auto;
   }
 }
