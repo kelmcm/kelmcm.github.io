@@ -14,20 +14,11 @@ div {
   }
 }
 
-img {
+.headshot img {
   border-radius: 50%;
   width: 150px;
 }
 
-/* Timer CSS */
-label {
-  width: 150px;
-  display: inline-block;
-}
-
-hr.solid {
-  border: none;
-  height: 1px;
-  color: #333;
-  background-color: #333;
+img {
+  border-radius: 3%;
 }
