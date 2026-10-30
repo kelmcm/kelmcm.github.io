@@ -35,7 +35,7 @@ jobs:
       - name: Build
         env:
           CI: false
-        run: npm run build
+        run: npm run build && cp build/index.html build/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
