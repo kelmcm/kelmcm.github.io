@@ -12,7 +12,7 @@ So, why is this? Why do we have to poll a GTFS feed?
 
 A quick Google search finds many blogs and articles weighing the pros and cons of data retrieval methods. A few takeaways in the context of transit data stuck out to me:
 
-- **One-way communication -** Transit agencies do not need to receive any data from the clients that are pinging their API. They only need to update the data. An API creates a clear boundary between those who produce and consume the data.
+- **One-way communication** - Transit agencies do not need to receive any data from the clients that are pinging their API. They only need to update the data. An API creates a clear boundary between those who produce and consume the data.
 - **Safety by separation** - There are no open connections that are accessing a Websocket and the transit agencies do not need to monitor which downstream clients are using their connection. Managing a dropped connection is more complicated than having stale data on an API endpoint.
 - **Snapshots over incremental** - Each time an API is updated, the full snapshot of the data is overwritten. When a downstream consumer polls the updated data, they have the current of all vehicles at that specific moment. This simplifies downstream transformations, whether a consumer wants to simply overwrite with the latest data or track the state changes over time. With incremental data, consumers are responsible for overwriting select vehicles, rather than all.
 
