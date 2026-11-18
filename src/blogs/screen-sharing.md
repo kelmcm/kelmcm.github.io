@@ -1,6 +1,6 @@
 ---
 title: Screen sharing. A peak into your mind.
-date: 2026-11-04
+date: 2026-11-18
 excerpt: An argument for screen sharing has a tool for learning
 ---
 
