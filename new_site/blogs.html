@@ -4,14 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Kelly McManus</title>
+    <link rel="alternate" type="application/rss+xml" title="Kelly McManus RSS Feed" href="./feed.xml">
     <script src="components/header.js" defer></script>
-    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
-<body class="content">
-    <site-header></site-header>
-    <md-block>
-        This is a *Markdown* Paragraph.
-    </md-block>
+<body bgcolor="#D5FFFF">
+<table width="100%" cellpadding="40" border="0">
+    <tr>
+        <td>
+            <site-header></site-header>
+            <div id="bloglist"></div>
+            <div id="content"></div>
+            <script>
+                const params = new URLSearchParams(window.location.search);
+                const postSlug = params.get("post");
+
+                if (postSlug) {
+                    // Load single blog post markdown
+                    fetch(`./blogs/${postSlug}.md`)
+                        .then(res => {
+                            if (!res.ok) throw new Error("Blog not found");
+                            return res.text();
+                        })
+                        .then(rawMd => {
+                            // Strip --- frontmatter --- before rendering markdown
+                            const match = rawMd.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+                            let title = postSlug;
+                            let date = "";
+                            let body = rawMd;
+
+                            if (match) {
+                                body = match[2];
+                                match[1].split(/\r?\n/).forEach(line => {
+                                    const colonIdx = line.indexOf(":");
+                                    if (colonIdx !== -1) {
+                                        const key = line.slice(0, colonIdx).trim();
+                                        const val = line.slice(colonIdx + 1).trim();
+                                        if (key === "title") title = val;
+                                        if (key === "date") date = val;
+                                    }
+                                });
+                            }
+
+                            document.getElementById("content").innerHTML = `
+                                <p><a href="./blogs.html">&larr; Back to blogs</a></p>
+                                <h2>${title}</h2>
+                                <p>${date}</p>
+                            `;
+                        })
+                        .catch(() => {
+                            document.getElementById("content").innerHTML = `<p>Blog not found. <a href="./blogs.html">Back to blogs</a></p>`;
+                        });
+                } else {
+                    // Load blog list from RSS feed.xml
+                    fetch("./feed.xml")
+                        .then(res => res.text())
+                        .then(xmlText => {
+                            const xml = new DOMParser().parseFromString(xmlText, "text/xml");
+                            const items = xml.querySelectorAll("item");
+                            const bloglist = document.getElementById("bloglist");
+
+                            items.forEach(item => {
+                                const title = item.querySelector("title")?.textContent || "";
+                                const link = item.querySelector("link")?.textContent || "";
+                                const date = item.querySelector("pubDate")?.textContent || "";
+
+                                const postDiv = document.createElement("div");
+                                postDiv.innerHTML = `
+                                    <p><a href="${link}">${title}</a></p>
+                                    <p>${date}</p>
+                                `;
+                                bloglist.appendChild(postDiv);
+                            });
+                        });
+                }
+            </script>
+        </td>
+    </tr>
+</table>
 </body>
+</html>
