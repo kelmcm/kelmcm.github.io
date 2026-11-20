@@ -7,28 +7,28 @@
 
     <item>
         <title>Screen sharing. A peak into your mind.</title>
-        <link>blogs.html?post=screen-sharing</link>
+        <link>blog.html?post=screen-sharing</link>
         <guid isPermaLink="false">screen-sharing</guid>
         <pubDate>2026-11-18</pubDate>
     </item>
 
     <item>
         <title>Why do we poll GTFS-Realtime Feeds?</title>
-        <link>blogs.html?post=why-poll-gtfs-realtime</link>
+        <link>blog.html?post=why-poll-gtfs-realtime</link>
         <guid isPermaLink="false">why-poll-gtfs-realtime</guid>
         <pubDate>2026-11-11</pubDate>
     </item>
 
     <item>
         <title>Starting Recurse Center</title>
-        <link>blogs.html?post=starting-recurse</link>
+        <link>blog.html?post=starting-recurse</link>
         <guid isPermaLink="false">starting-recurse</guid>
         <pubDate>2026-11-04</pubDate>
     </item>
 
     <item>
         <title>Blog post in Etsy's Code as Craft</title>
-        <link>blogs.html?post=etsy-code-as-craft</link>
+        <link>blog.html?post=etsy-code-as-craft</link>
         <guid isPermaLink="false">etsy-code-as-craft</guid>
         <pubDate>2025-11-25</pubDate>
     </item>

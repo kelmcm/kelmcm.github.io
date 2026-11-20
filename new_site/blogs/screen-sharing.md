@@ -1,7 +1,6 @@
 ---
 title: Screen sharing. A peak into your mind.
 date: 2026-11-18
-excerpt: An argument for screen sharing has a tool for learning
 ---
 
 It’s now Week 3 of Recurse Center, and it’s been a whirlwind. From starting in-person at the Hub in Brooklyn, to now back working remote, I’ve now experienced RC from both sides of the screen. 
@@ -19,7 +18,7 @@ When a colleague shares their screen, you get a peek into their setup, their env
 
 A few years ago, I was getting comfortable with IntelliJ and I saw my colleague pull up the IDE search bar with Command-O. This is now a shortcut I use daily. 
 
-![ctrl-o.png](/images/ctrl-o.png)
+![ctrl-o.png](./images/ctrl-o.png)
 
 Some people are naturally curious and will do research to customize their setup and learn every shortcut, while others (like me) prefer the struggle of clicking through UI elements until one day they see a colleague use the shortcut that will make their life easier. 
 

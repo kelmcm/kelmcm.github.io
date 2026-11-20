@@ -1,7 +1,6 @@
 ---
 title: Starting Recurse Center
 date: 2026-11-04
-excerpt: Why I'm doing a coding retreat.  
 ---
 
 “Finally, back to civilization.”
