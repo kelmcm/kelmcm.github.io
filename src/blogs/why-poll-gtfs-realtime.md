@@ -1,7 +1,6 @@
 ---
 title: Why do we poll GTFS-Realtime Feeds?
 date: 2026-11-11
-excerpt: A few thoughts if you are wondering why polling is the generic strategy to access transit APIs. 
 ---
 
 This past week, I’ve been learning the [GTFS (General Transit Feed Specification)]() data structures. I’m building a streaming data pipeline that will retrieve, transform, and display GTFS data from the [Montreal STM APIs](https://www.stm.info/a-propos/documents-donnees/donnees-ouvertes). What the full pipeline will look like is still to be determined, but the first step is to get access to the data!

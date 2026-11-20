@@ -1,7 +1,6 @@
 ---
 title: Blog post in Etsy's Code as Craft
 date: 2025-11-25
-excerpt: Shortening the length of an experiment from 1 to 3 days, on average.  
 ---
 
 When I joined Etsy, my first project was to speed up experimentation through variance reduction, migrating our CUPED implementation to support CUPAC.

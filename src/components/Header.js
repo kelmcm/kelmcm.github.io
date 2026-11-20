@@ -1,16 +1,22 @@
-import { NavLink, Link } from "react-router-dom";
+class SiteHeader extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <header>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="margin: 0;"><h1>Kelly McManus</h1></div>
+                    <div>
+                        <a href="./">About</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./cv.html">CV</a>
+                    </div>
+                </div>
+                
+                <div style="clear: both;">
+                    <hr>
+                </div>
+            </header>
+    `;
+    }
+}
 
-const Header = () => (
-  <header className="header">
-    <h1 className="site-title">
-      <Link to="/">Kelly McManus</Link>
-    </h1>
-    <nav className="nav">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/blogs">Blog</NavLink>
-      <NavLink to="/cv">CV</NavLink>
-    </nav>
-  </header>
-);
-
-export default Header;
+customElements.define('site-header', SiteHeader);

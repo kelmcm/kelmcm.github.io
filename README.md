@@ -2,17 +2,7 @@
 
 My personal website that includes about, blogs, and CV. 
 
-Created with React.
-
-## Development
-
-In the project directory, run:
-
-### `npm start`
-
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.You may also see any lint errors in the console.
+Created with HTML and minimal JavaScript / CSS. 
 
 ## Deployment
 
